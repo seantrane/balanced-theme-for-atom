@@ -22,7 +22,7 @@
   },
   "scripts": {
     "commitmsg": "commitlint -E GIT_PARAMS",
-    "lint:md": "npm run markdownlint -- -i 'node_modules/' -c '.markdownlint.yaml' './'",
+    "lint:md": "npm run markdownlint -- -i 'node_modules/' -i 'atom/' -c '.markdownlint.yaml' './'",
     "lint": "npm run lint:md",
     "markdownlint": "markdownlint",
     "semantic-release": "semantic-release"
