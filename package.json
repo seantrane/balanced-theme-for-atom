@@ -1,0 +1,89 @@
+{
+  "name": "balanced-theme",
+  "theme": "syntax",
+  "description": "BalanceD, a syntax theme with semantic purpose.",
+  "version": "1.0.0",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "author": "Sean Trane Sciarrone",
+  "license": "MIT",
+  "homepage": "https://github.com/seantrane/balanced-theme-for-atom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seantrane/balanced-theme-for-atom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seantrane/balanced-theme-for-atom/issues"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "scripts": {
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "lint:md": "npm run markdownlint -- -i 'node_modules/' -c '.markdownlint.yaml' './'",
+    "lint": "npm run lint:md",
+    "markdownlint": "markdownlint",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "@commitlint/travis-cli": "^7.0.0",
+    "@semantic-release/changelog": "^3.0.0",
+    "@semantic-release/exec": "^3.0.1",
+    "@semantic-release/git": "^7.0.1",
+    "husky": "^0.14.3",
+    "markdownlint-cli": "^0.12.0",
+    "semantic-release": "^15.9.5"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "verifyConditions": [
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "! type apm &> /dev/null && {echo \"apm is required\" && exit 1}"
+      },
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "[[ \"\" = \"${ATOM_ACCESS_TOKEN:-}\" ]] && {echo \"ATOM_ACCESS_TOKEN variable unavailable\" && exit 1}"
+      },
+      "@semantic-release/changelog",
+      {
+        "path": "@semantic-release/npm",
+        "npmPublish": false
+      },
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      {
+        "path": "@semantic-release/changelog",
+        "changelogTitle": "# CHANGELOG"
+      },
+      {
+        "path": "@semantic-release/npm",
+        "npmPublish": false
+      },
+      "@semantic-release/git"
+    ],
+    "publish": [
+      {
+        "path": "@semantic-release/exec",
+        "cmd": "apm publish --tag \"${nextRelease.gitTag}\" 1>&2"
+      },
+      "@semantic-release/github"
+    ],
+    "success": [
+      "@semantic-release/github"
+    ],
+    "fail": [
+      "@semantic-release/github"
+    ]
+  }
+}

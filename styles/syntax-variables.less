@@ -1,0 +1,68 @@
+@import 'colors';
+
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+@syntax-theme-gray:                       #777;
+@syntax-theme-gold:                       #dbaf00;
+@syntax-theme-light-blue:                 #a3d1ff;
+@syntax-theme-blue:                       #7ad;
+@syntax-theme-green:                      #9c6;
+@syntax-theme-orange:                     #c63;
+@syntax-theme-red:                        #c33;
+@syntax-theme-tan:                        #aa9786;
+@syntax-theme-pink:                       #f9f;
+@syntax-theme-dark-pink:                  #969;
+
+// General colors
+@syntax-text-color:                       @very-light-gray;
+@syntax-cursor-color:                     white;
+@syntax-selection-color:                  @very-dark-gray;
+// @syntax-selection-flash-color:            lighten(@dark-gray, 10%); // Color the selection is 'flashed' when you run find next
+@syntax-background-color:                 @dark-gray;
+
+// Guide colors
+@syntax-wrap-guide-color:                 @very-dark-gray;
+@syntax-indent-guide-color:               @gray;
+@syntax-invisible-character-color:        lighten(@syntax-background-color, 5%);
+
+// For find and replace markers
+@syntax-result-marker-color:              @light-gray;
+@syntax-result-marker-color-selected:     white;
+
+// Gutter colors
+@syntax-gutter-text-color:                @very-light-gray;
+@syntax-gutter-text-color-selected:       @syntax-gutter-text-color;
+@syntax-gutter-background-color:          @very-dark-gray;
+@syntax-gutter-background-color-selected: @dark-gray;
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed:                    @blue;
+@syntax-color-added:                      @green;
+@syntax-color-modified:                   @orange;
+@syntax-color-removed:                    @red;
+
+// For language entity colors
+@syntax-color-variable:                   @syntax-theme-gold;
+@syntax-color-constant:                   @syntax-theme-light-blue;
+@syntax-color-property:                   average(@syntax-theme-orange, @syntax-theme-gold);//#DF6A73;
+@syntax-color-value:                      @syntax-theme-green;
+@syntax-color-function:                   @syntax-theme-orange;
+@syntax-color-method:                     @syntax-color-function;
+@syntax-color-class:                      @syntax-theme-orange;
+@syntax-color-keyword:                    @syntax-theme-red;
+@syntax-color-tag:                        @syntax-theme-tan;
+@syntax-color-attribute:                  lighten(@syntax-theme-tan, 10%);
+@syntax-color-import:                     #97C378;
+@syntax-color-snippet:                    #97C378;
+
+// Custom syntax colors
+@syntax-color-comment:                    @syntax-theme-gray;
+@syntax-color-comment-keyword:            @syntax-theme-blue;
+@syntax-color-string:                     @syntax-theme-green;
+
+@syntax-color-entity-tag:                 @syntax-theme-tan;
+
+@syntax-color-css-property:               #69c;
+@syntax-color-css-tag:                    @syntax-theme-dark-pink;
+@syntax-color-css-class:                  @syntax-theme-pink;
