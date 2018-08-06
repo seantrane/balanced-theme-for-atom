@@ -45,14 +45,6 @@
   },
   "release": {
     "verifyConditions": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "! type apm &> /dev/null && {echo \"apm is required\" && exit 1}"
-      },
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "[[ \"\" = \"${ATOM_ACCESS_TOKEN:-}\" ]] && {echo \"ATOM_ACCESS_TOKEN variable unavailable\" && exit 1}"
-      },
       "@semantic-release/changelog",
       {
         "path": "@semantic-release/npm",
