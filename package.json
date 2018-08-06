@@ -2,7 +2,7 @@
   "name": "balanced-theme",
   "theme": "syntax",
   "description": "BalanceD, a syntax theme with semantic purpose.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "keywords": [
     "syntax",
     "theme"
@@ -67,7 +67,7 @@
     "publish": [
       {
         "path": "@semantic-release/exec",
-        "cmd": "apm publish --tag \"${nextRelease.gitTag}\" 1>&2"
+        "cmd": "apm publish --tag ${nextRelease.gitTag} 1>&2"
       },
       "@semantic-release/github"
     ],
