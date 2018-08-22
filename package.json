@@ -35,7 +35,7 @@
     "@semantic-release/exec": "^3.0.1",
     "@semantic-release/git": "^7.0.1",
     "husky": "^0.14.3",
-    "markdownlint-cli": "^0.12.0",
+    "markdownlint-cli": "^0.13.0",
     "semantic-release": "^15.9.5"
   },
   "commitlint": {
