@@ -46,10 +46,7 @@
   "release": {
     "verifyConditions": [
       "@semantic-release/changelog",
-      {
-        "path": "@semantic-release/npm",
-        "npmPublish": false
-      },
+      "@semantic-release/npm",
       "@semantic-release/git",
       "@semantic-release/github"
     ],
@@ -58,10 +55,7 @@
         "path": "@semantic-release/changelog",
         "changelogTitle": "# CHANGELOG"
       },
-      {
-        "path": "@semantic-release/npm",
-        "npmPublish": false
-      },
+      "@semantic-release/npm",
       "@semantic-release/git"
     ],
     "publish": [
@@ -76,6 +70,7 @@
     ],
     "fail": [
       "@semantic-release/github"
-    ]
+    ],
+    "npmPublish": false
   }
 }
