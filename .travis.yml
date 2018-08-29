@@ -47,7 +47,7 @@ install:
 before_script: greenkeeper-lockfile-update
 script:
   - commitlint-travis
-  - npm install -g github-label-sync && github-label-sync -l 'https://git.io/fAe5i' tandfgroup/tandf-shell
+  - npm install -g github-label-sync && github-label-sync -a "$GH_TOKEN" -l 'https://git.io/fAe5i' seantrane/balanced-theme-for-atom
   - npm run lint
 after_script: greenkeeper-lockfile-upload
 jobs:
