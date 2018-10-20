@@ -9,14 +9,9 @@
   ],
   "author": "Sean Trane Sciarrone",
   "license": "MIT",
-  "homepage": "https://github.com/seantrane/balanced-theme-for-atom",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seantrane/balanced-theme-for-atom.git"
-  },
-  "bugs": {
-    "url": "https://github.com/seantrane/balanced-theme-for-atom/issues"
-  },
+  "homepage": "https://github.com/seantrane/balanced-theme-for-atom#readme",
+  "repository": "github:seantrane/balanced-theme-for-atom",
+  "bugs": "https://github.com/seantrane/balanced-theme-for-atom/issues",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
