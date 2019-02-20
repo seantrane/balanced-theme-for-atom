@@ -50,7 +50,7 @@ Thank you for contributing.
 ## Clone the Repository <a id="clone-repo"></a>
 
 ```bash
-git clone https://github.com/seantrane/balanced-theme-for-atom.git balanced-theme-for-atom && cd balanced-theme-for-atom
+git clone git@github.com:seantrane/balanced-theme-for-atom.git balanced-theme-for-atom && cd balanced-theme-for-atom
 ```
 
 ## Install Dependencies <a id="install-dependencies"></a>
