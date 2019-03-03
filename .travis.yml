@@ -20,7 +20,7 @@ notifications:
 branches:
   only:
     - master
-    - /^greenkeeper.*$/
+    - /^release.*$/
 env:
   global:
     - APM_TEST_PACKAGES=""
@@ -34,7 +34,7 @@ os:
 before_install:
   # package-lock.json was introduced in npm@5
   - '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest' # skipped when using node 9
-  - npm install -g github-label-sync greenkeeper-lockfile
+  - npm install -g github-label-sync
 install:
   - travis_retry npm install
   # See https://github.com/atom/ci
@@ -43,11 +43,9 @@ install:
   - ./build-package.sh
   # Add apm to the PATH
   - export PATH=$PATH:~/atom/usr/bin
-before_script: greenkeeper-lockfile-update
 script:
   - commitlint-travis
   - npm run lint
-after_script: greenkeeper-lockfile-upload
 jobs:
   include:
     - stage: deploy
